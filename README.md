@@ -5,3 +5,6 @@ Godot OpenSimplexNoise using a shader
 
 
 ![Shader](https://user-images.githubusercontent.com/48863881/125081513-61917080-e0c6-11eb-8fa1-79d2d2c9e71d.PNG)
+
+
+Adapted from: https://github.com/ashima/webgl-noise
