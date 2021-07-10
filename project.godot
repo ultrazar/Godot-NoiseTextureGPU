@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "ImageTexture",
+"class": "NoiseTexture_v2",
+"language": "GDScript",
+"path": "res://GDScript SiplexNoise/SimplexNoise.gd"
+} ]
+_global_script_class_icons={
+"NoiseTexture_v2": ""
+}
+
 [application]
 
 config/name="Open Simplex Noise Shader"

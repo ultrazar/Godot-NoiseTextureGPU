@@ -12,7 +12,7 @@ func render():
 	yield(texture,"changed")
 	actual_time = (OS.get_ticks_msec() / 1000.0) - actual_time
 	print(actual_time)
-	yield(get_tree().create_timer(3.0),"timeout")
+	yield(get_tree().create_timer(3.0),"timeout") # Time to see the new texture
 	hide()
 	return actual_time
 

@@ -1,18 +1,39 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Benchmark.gd" type="Script" id=1]
 [ext_resource path="res://NoiseTexture.gd" type="Script" id=2]
 [ext_resource path="res://Shader SimplexNoise.gd" type="Script" id=3]
-[ext_resource path="res://shader_to_image/ShaderToImage.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GDScript SiplexNoise/SimplexNoise.gd" type="Script" id=5]
 
-[sub_resource type="OpenSimplexNoise" id=2]
-seed = 1
+[sub_resource type="Image" id=5]
+data = {
+"data": PoolByteArray( 0, 0, 0 ),
+"format": "RGB8",
+"height": 1,
+"mipmaps": false,
+"width": 1
+}
+
+[sub_resource type="ImageTexture" id=2]
+image = SubResource( 5 )
+size = Vector2( 1, 1 )
+script = ExtResource( 5 )
+Use_GPU = true
+_seed = 2
+size = Vector2( 1, 1 )
+octaves = 9
+period = 64.0
+persistence = 0.5
+lacunarity = 2.0
+render = false
+
+[sub_resource type="OpenSimplexNoise" id=3]
 octaves = 9
 
-[sub_resource type="NoiseTexture" id=3]
+[sub_resource type="NoiseTexture" id=4]
 width = 1
 height = 1
-noise = SubResource( 2 )
+noise = SubResource( 3 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0
@@ -22,11 +43,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ShaderToImage" parent="." instance=ExtResource( 4 )]
-
 [node name="Shader" type="TextureRect" parent="."]
+visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
+texture = SubResource( 2 )
 expand = true
 script = ExtResource( 3 )
 __meta__ = {
@@ -37,7 +58,7 @@ __meta__ = {
 visible = false
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = SubResource( 3 )
+texture = SubResource( 4 )
 expand = true
 stretch_mode = 1
 script = ExtResource( 2 )
