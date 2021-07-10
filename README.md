@@ -10,7 +10,7 @@ Adapted from: https://github.com/ashima/webgl-noise
 SimplexNoise programmed in Shader and GDScript ( TODO C++ )
 
 How to use:
- 1- Create a Sprite/TextRect
- 2- In texture parameter, select NoiseTexture_v2
- 3- Press render button
+ 1. Create a Sprite/TextRect
+ 2. In texture parameter, select NoiseTexture_v2
+ 3. Press render button
 
