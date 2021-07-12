@@ -18,6 +18,6 @@ func render():
 	yield(texture._render(),"completed") if Use_gpu else texture._render()
 	actual_time = (OS.get_ticks_msec() / 1000.0) - actual_time
 	print(actual_time)
-	yield(get_tree().create_timer(100.0),"timeout") # Time to see the new texture...
+	yield(get_tree().create_timer(5.0),"timeout") # Time to see the new texture...
 	hide()
 	return actual_time

@@ -9,7 +9,7 @@
 config_version=4
 
 _global_script_classes=[ {
-"base": "",
+"base": "Resource",
 "class": "CPP_SimplexNoise",
 "language": "NativeScript",
 "path": "res://GDScript SiplexNoise/cpp/Script.gdns"
