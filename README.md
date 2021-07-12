@@ -15,5 +15,5 @@ How to use (for GPU):
  3. Press render button
 
 elif (for CPU):
-Need to compile the GDNative version (you can use this tutorial: https://gist.github.com/willnationsdev/437eeaeea2e675c0bea53343f7ecd4cf) or change some lines for using GDScript version (alert, very slow)
+ - Need to compile the GDNative version (you can use this tutorial: https://gist.github.com/willnationsdev/437eeaeea2e675c0bea53343f7ecd4cf) or change some lines for using GDScript version (alert, very slow)
 
