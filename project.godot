@@ -9,18 +9,25 @@
 config_version=4
 
 _global_script_classes=[ {
+"base": "",
+"class": "CPP_SimplexNoise",
+"language": "NativeScript",
+"path": "res://GDScript SiplexNoise/cpp/Script.gdns"
+}, {
 "base": "ImageTexture",
 "class": "NoiseTexture_v2",
 "language": "GDScript",
 "path": "res://GDScript SiplexNoise/SimplexNoise.gd"
 } ]
 _global_script_class_icons={
+"CPP_SimplexNoise": "",
 "NoiseTexture_v2": ""
 }
 
 [application]
 
 config/name="Open Simplex Noise Shader"
+run/main_scene="res://Benchmark.tscn"
 config/icon="res://icon.png"
 
 [physics]
