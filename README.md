@@ -5,7 +5,9 @@ Godot OpenSimplexNoise using a shader
 
 ![Shader](https://user-images.githubusercontent.com/48863881/125363432-e43d5880-e370-11eb-884c-6d797ba2bdb6.PNG)
 
-Adapted from: https://github.com/ashima/webgl-noise
+Content:
+ - A plugin (In the addons folder), there's all the necessary files
+ - A simple benchmark to comparise the rendering of GPU vs OpenSimplexNoise of Godot
 
 SimplexNoise (currently 2D, TODO 3D and 4D) programmed in Shader, GDScript and C++ (GDNative)
 
@@ -17,3 +19,4 @@ How to use (for GPU):
 elif (for CPU):
  - Need to compile the GDNative version for your system (you can use this tutorial: https://gist.github.com/willnationsdev/437eeaeea2e675c0bea53343f7ecd4cf) or change some lines for using GDScript version (alert, very slow). I only included the binary compiled that works for my machine. I'm new to GDNative and some help would be fully appreciated!
 
+Thanks to: https://github.com/ashima/webgl-noise
