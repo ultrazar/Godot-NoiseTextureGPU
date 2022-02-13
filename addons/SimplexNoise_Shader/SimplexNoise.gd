@@ -114,7 +114,7 @@ class GDScript_SimplexNoise:
 
 var renderer := shader_renderer.new() 
 var CPU_SimplexNoise :=  CPP_SimplexNoise.new() # If GDNative version doesn't work, you can use: GDScript_SimplexNoise.new() 
-var main_shader : ShaderMaterial = preload("res://Simplex shader.tres").duplicate()
+var main_shader : ShaderMaterial = preload("Simplex shader.tres").duplicate()
 
 export var Use_GPU : bool = true setget set_use_GPU
 func set_use_GPU(bol):
@@ -131,7 +131,11 @@ func set_use_GPU(bol):
 export var Threading_render : bool = true # Only for CPU render
 export var _seed : int = 1 setget set_seed
 func set_seed(sd):
-	if int(sd) != 0:
+	var _sd = int(sd)
+	
+	if [17,34,68,136,272,544].has(_sd): # For some reason I don't know, numbers of the power of 2, plus 1 doesn't work
+		_seed = _sd + 1
+	elif _sd != 0:
 		_seed = sd
 export var size : Vector2 = Vector2(100,100) setget set_size
 func set_size(_size):
